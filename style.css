@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+
+:root {
+  --accent: #ff8fb3;
+  --paper-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: url("bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  font-family: 'Zeyada', cursive;
+  overflow-x: hidden;
+  padding: 20px 0;
+}
+
+.stage {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.papers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Paper style */
+.paper {
+  width: 90%;
+  max-width: 360px;
+  background-image: url("paper.webp");
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  padding: 28px;
+  margin: 22px 0;
+  box-shadow: var(--paper-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 24px;
+  color: #2a0e1a;
+  font-weight: 700;
+  cursor: grab;
+  user-select: none;
+  transform-origin: center center;
+}
+
+/* Paper glow */
+.paper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(255,140,179,0.05) inset;
+  pointer-events: none;
+}
+
+/* Drag hover */
+.paper:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.28);
+}
+
+.note-tip {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #5b2e3c;
+  opacity: 0.9;
+}
