@@ -1,84 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
 
-:root {
-  --accent: #ff8fb3;
-  --paper-shadow: 0 10px 25px rgba(0,0,0,0.25);
-}
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+
 
 body {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  background-image: url("bg.jpeg");
-  background-size: cover;
-  background-position: center;
-  font-family: 'Zeyada', cursive;
-  overflow-x: hidden;
-  padding: 20px 0;
-}
-
-.stage {
-  width: 100%;
-  max-width: 420px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.papers {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-/* Paper style */
-.paper {
-  width: 90%;
-  max-width: 360px;
-  background-image: url("paper.webp");
-  background-size: cover;
-  background-position: center;
-  border-radius: 12px;
-  padding: 28px;
-  margin: 22px 0;
-  box-shadow: var(--paper-shadow);
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  font-size: 24px;
-  color: #2a0e1a;
-  font-weight: 700;
-  cursor: grab;
-  user-select: none;
-  transform-origin: center center;
+
+  background-size: 1000px;
+  background-image: url("https://www.psdgraphics.com/wp-content/uploads/2022/01/white-math-paper-texture.jpg");
+  background-position: center center;
 }
 
-/* Paper glow */
-.paper::before {
-  content: "";
+.paper {
+  background-image: url("https://thumbs.dreamstime.com/b/seamless-graph-paper-pattern-281206623.jpg?w=768");
+  background-size: 500px;
+  background-position: center center;
+  padding: 20px 100px;
+/*  min-width: 800px; */
+  
+  transform: rotateZ(-5deg);
+  box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
+  
   position: absolute;
-  inset: 0;
-  border-radius: 12px;
-  box-shadow: 0 0 30px rgba(255,140,179,0.05) inset;
-  pointer-events: none;
 }
 
-/* Drag hover */
-.paper:hover {
-  transform: scale(1.02);
-  box-shadow: 0 20px 45px rgba(0,0,0,0.28);
+.paper.heart {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  padding: 0;
+  border-radius: 50%;
 }
 
-.note-tip {
-  margin-top: 10px;
-  text-align: center;
-  font-size: 14px;
-  color: #5b2e3c;
-  opacity: 0.9;
+.paper.image {
+  padding: 10px;
+}
+.paper.image p {
+  font-size: 30px;
+}
+
+img {
+  max-height: 200px;
+  width: 100%;
+  user-select: none;
+}
+
+.paper.heart::after {
+  content: "";
+  background-image: url('https://cdn.pixabay.com/photo/2016/03/31/19/25/cartoon-1294994__340.png');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: 150px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+}
+
+p {
+  font-family: 'Zeyada';
+  font-size: 50px;
+  color: rgb(0,0,100);
+  opacity: 0.75;
+  user-select: none;
+  
+  /* filter: drop-shadow(2px 1.5px 1px rgba(0,0,105,0.9)); */
 }
